@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field form-group">
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :author, style: "display: block" %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :genre, style: "display: block" %>
-    <%= form.text_field :genre %>
+    <%= form.text_field :genre, class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :year, style: "display: block" %>
-    <%= form.text_field :year %>
+    <%= form.text_field :year, class:"form-control" %>
+    <br>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class:"btn btn-secondary" %>
   </div>
 <% end %>

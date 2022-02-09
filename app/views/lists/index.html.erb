@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Books</h1>
-
+<!--
 <table>
   <thead>
     <tr>
@@ -13,14 +13,16 @@
     </tr>
   </thead>
 </table>
-
+-->
 <div id="lists">
   <% @lists.each do |list| %>
     <%= render list %>
     <p>
-      <%= link_to "Show this book", list %>
+      <%= link_to "Show", list %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New book", new_list_path %>
+<%= link_to "New book", new_list_path, class:"btn btn-secondary" %>
+
+

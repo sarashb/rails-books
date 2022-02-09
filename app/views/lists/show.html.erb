@@ -1,10 +1,17 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @list %>
-
-<div>
-  <%= link_to "Edit this book", edit_list_path(@list) %> |
-  <%= link_to "Back to books", lists_path %>
-
-  <%= button_to "Destroy this book", @list, method: :delete %>
+<div class="jumbotron">
+  <h1 class="display-4"><%= @list.title %></h1>
+  <p class="lead"><%= render @list %></p>
+  <hr class="my-4">
+  <%= link_to "Edit", edit_list_path(@list), class:"btn btn-secondary" %> |
+  <%= link_to "Back", lists_path, class:"btn btn-dark" %>
 </div>
+<div>
+
+<%= link_to 'Delete', @list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+
+<!--
+  <%= button_to "Delete", @list, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+-->
+</div>
+
